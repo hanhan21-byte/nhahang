@@ -1,174 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trang Chủ - Nhà Hàng</title>
-  <style>
-    body {
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  background-color: #f7f9fc;
-  color: #333;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Nhà Hàng</title>
+    <style>
+        /* General Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-.banner {
-  width: 100%;
-  height: 450px;
-  background-image: url('banner.jpg'); /* Đường dẫn ảnh banner */
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: #fff;
-  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
-}
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-.banner h1 {
-  font-size: 50px;
-  font-weight: bold;
-  margin: 0;
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-}
+        .container {
+            max-width: 900px;
+            margin: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
 
-.banner p {
-  font-size: 20px;
-  margin: 15px 0 0;
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-}
+        /* Header */
+        header {
+            width: 100%;
+            background: linear-gradient(135deg, #4CAF50, #81C784);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
 
-.content {
-  padding: 40px 20px;
-}
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
 
-.section {
-  margin-bottom: 60px;
-}
+        /* Navigation styles are in the included navbar.php */
 
-.section h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-  border-bottom: 3px solid #007bff;
-  display: inline-block;
-  padding-bottom: 8px;
-  color: #007bff;
-}
+        /* Welcome Section */
+        .container h2 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            color: #4CAF50;
+            font-weight: bold;
+        }
 
-.section p {
-  font-size: 16px;
-  line-height: 1.6;
-}
+        .container p {
+            font-size: 1.2em;
+            color: #666;
+            line-height: 1.6;
+        }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-}
-
-.card {
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-
-.card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.card h3 {
-  margin: 15px;
-  font-size: 22px;
-  color: #333;
-}
-
-.card p {
-  margin: 15px;
-  font-size: 14px;
-  color: #666;
-}
-
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-}
-
-footer {
-  background-color: #007bff;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-}
-
-footer p {
-  margin: 0;
-  font-size: 14px;
-}
-
-  </style>
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <!-- Header -->
-  <div id="header"></div>
+    <header>
+        <h1>Quản Lý Nhà Hàng</h1>
+    </header>
 
-  <?php include '../navbar/navbar.php'; ?>
+    <?php include '../navbar/navbar.php'; ?>
 
-
-  <!-- Banner -->
-  <div class="banner">
-    <div>
-      <h1>Chào mừng đến với Nhà Hàng!</h1>
-      <p>Trải nghiệm ẩm thực tuyệt vời với chúng tôi</p>
+    <div class="container">
+        <h2>Chào mừng bạn đến với hệ thống quản lý nhà hàng</h2>
+        <p>Chọn một mục từ thanh điều hướng để bắt đầu quản lý nhà hàng.</p>
     </div>
-  </div>
-
-  <!-- Nội dung chính -->
-  <div class="content">
-    <!-- Phần giới thiệu -->
-    <div class="section">
-      <h2>Giới Thiệu</h2>
-      <p>Chúng tôi tự hào mang đến cho bạn những món ăn ngon nhất, phục vụ chuyên nghiệp và không gian ấm cúng. Nhà hàng chúng tôi luôn sẵn sàng phục vụ bạn và gia đình.</p>
-    </div>
-
-    <!-- Phần món ăn nổi bật -->
-    <div class="section">
-      <h2>Món Ăn Nổi Bật</h2>
-      <div class="grid">
-        <div class="card">
-          <img src="mon1.jpg" alt="Món 1">
-          <h3>Gà Nướng Mật Ong</h3>
-          <p>Hương vị thơm ngon, hấp dẫn.</p>
-        </div>
-        <div class="card">
-          <img src="mon2.jpg" alt="Món 2">
-          <h3>Bò Bít Tết</h3>
-          <p>Thịt bò mềm, đậm đà.</p>
-        </div>
-        <div class="card">
-          <img src="mon3.jpg" alt="Món 3">
-          <h3>Hải Sản Tổng Hợp</h3>
-          <p>Tươi ngon từ biển cả.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Phần liên hệ -->
-    <div class="section">
-      <h2>Liên Hệ</h2>
-      <p>Địa chỉ: 123 Đường ABC, Thành phố XYZ</p>
-      <p>Hotline: 0123 456 789</p>
-      <p>Email: lienhe@nhahang.com</p>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2024 Nhà Hàng. All rights reserved.</p>
-  </footer>
 </body>
 </html>
+

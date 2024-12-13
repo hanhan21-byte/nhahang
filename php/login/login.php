@@ -42,82 +42,98 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login Form</title>
   <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f0f4f8;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background: linear-gradient(120deg, #3498db, #8e44ad);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
-    .login-container {
-      background-color: #ffffff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      width: 400px;
+    header {
+        text-align: center;
+        margin-bottom: 2rem;
     }
 
-    .login-form h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      color: #333333;
+    header h1 {
+        color: white;
+        font-size: 2rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     }
 
-    .form-group {
-      margin-bottom: 15px;
+    .container {
+        width: 100%;
+        max-width: 400px;
+        background: white;
+        border-radius: 10px;
+        padding: 2rem;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     }
 
-    .form-group label {
-      display: block;
-      margin-bottom: 5px;
-      font-size: 14px;
-      color: #555555;
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
     }
 
-    .form-group input {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #cccccc;
-      border-radius: 5px;
-      font-size: 14px;
+    label {
+        font-weight: bold;
+        color: #333;
     }
 
-    .login-button {
-      width: 100%;
-      padding: 10px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
+    input {
+        width: 100%;
+        padding: 0.8rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 1rem;
+        transition: border-color 0.3s ease;
     }
 
-    .login-button:hover {
-      background-color: #0056b3;
+    input:focus {
+        outline: none;
+        border-color: #3498db;
+        box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
     }
 
-    .register-link {
-      text-align: center;
-      margin-top: 15px;
-      font-size: 14px;
-      color: #555555;
+    button {
+        background-color: #3498db;
+        color: white;
+        padding: 0.8rem;
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
     }
 
-    .register-link a {
-      color: #007bff;
-      text-decoration: none;
-      font-weight: bold;
+    button:hover {
+        background-color: #2980b9;
     }
 
-    .register-link a:hover {
-      text-decoration: underline;
+    p {
+        text-align: center;
+        margin-top: 1rem;
+        font-size: 0.9rem;
     }
-  </style>
+
+    p a {
+        color: #3498db;
+        text-decoration: none;
+    }
+
+    p a:hover {
+        text-decoration: underline;
+    }
+</style>
 </head>
 <body>
   <div class="login-container">
@@ -132,10 +148,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <input type="password" id="password" name="password" placeholder="Nhập mật khẩu" required>
       </div>
       <button type="submit" class="login-button">Đăng nhập</button>
-      <div class="register-link">
-        Chưa có tài khoản? <a href="../register/register.php">Đăng ký ngay</a>.
-      </div>
     </form>
+    </form>
+    <p>Quên mật khẩu? <a href="../login/xuly-quenmatkhau.php">Quên tên đăng nhập hoặc mật khẩu</a></p>
   </div>
 </body>
 </html>
