@@ -12,33 +12,30 @@
 
     .header {
       display: flex;
-      justify-content: space-between;
+      justify-content: center; /* Căn giữa toàn bộ header */
       align-items: center;
       background-color: #18181b; /* Zinc-900 for dark theme */
       color: white;
-      padding: 10px 20px;
-    }
-
-    .logo {
-      font-size: 18px;
-      font-weight: bold;
+      padding: 20px 0; /* Tăng padding cho header */
     }
 
     .nav {
       display: flex;
+      justify-content: center; /* Căn giữa các mục trong nav */
       list-style: none;
       margin: 0;
       padding: 0;
     }
 
     .nav li {
-      margin-left: 20px;
+      margin: 0 30px; /* Tăng khoảng cách giữa các mục */
     }
 
     .nav a {
       text-decoration: none;
       color: white;
-      font-size: 14px;
+      font-size: 18px; /* Tăng kích thước chữ */
+      font-weight: bold; /* Làm đậm chữ */
       transition: color 0.3s;
     }
 
@@ -46,64 +43,10 @@
       color: #d4d4d8; /* Zinc-300 for hover effect */
     }
 
-    .user-options {
-      display: flex;
-      align-items: center;
-    }
-
-    .user-profile {
-      position: relative;
-      margin-right: 20px;
-      cursor: pointer;
-    }
-
-    .profile-dropdown {
-      position: absolute;
-      top: 40px;
-      right: 0;
-      background-color: #27272a; /* Zinc-800 for dropdown */
-      color: white;
-      border-radius: 4px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      display: none;
-      flex-direction: column;
-      min-width: 150px;
-    }
-
-    .profile-dropdown a {
-      text-decoration: none;
-      color: white;
-      padding: 10px;
-      border-bottom: 1px solid #3f3f46; /* Zinc-700 for separator */
-      transition: background-color 0.3s;
-    }
-
-    .profile-dropdown a:hover {
-      background-color: #3f3f46; /* Zinc-700 for hover */
-    }
-
-    .user-profile:hover .profile-dropdown {
-      display: flex;
-    }
-
-    .logout-btn {
-      background-color: transparent;
-      color: white;
-      border: none;
-      padding: 8px 15px;
-      font-size: 14px;
-      cursor: pointer;
-      transition: color 0.3s;
-    }
-
-    .logout-btn:hover {
-      color: #d4d4d8; /* Zinc-300 for hover effect */
-    }
-
     @media (max-width: 768px) {
       .header {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
       }
 
       .nav {
@@ -113,38 +56,20 @@
       }
 
       .nav li {
-        margin-left: 0;
-        margin-bottom: 10px;
-      }
-
-      .user-options {
-        width: 100%;
-        justify-content: space-between;
-        margin-top: 10px;
+        margin: 10px 0;
       }
     }
   </style>
 </head>
 <body>
   <div class="header">
-    <div class="logo">Nhà Hàng</div>
     <ul class="nav">
       <li><a href="../menu/menu.php">Thực đơn</a></li>
       <li><a href="../order/orders.php">Đơn Hàng</a></li>
       <li><a href="../employees/employees.php">Nhân Viên</a></li>
       <li><a href="../feedback/feedback.php">Ý Kiến</a></li>
-      <li><a href="../revenue/revenue.php">Doanh Thu</a></li>
+      <li><a href="../revenue/revenue.php">Doanh thu</a></li>
     </ul>
-    <div class="user-options">
-      <div class="user-profile">
-        Hồ sơ
-        <div class="profile-dropdown">
-          <a href="profile.php">Thông tin cá nhân</a>
-          <a href="update-account.php">Cập nhật tài khoản</a>
-        </div>
-      </div>
-      <button class="logout-btn" onclick="window.location.href='../logout/logout.php';">Đăng xuất</button>
-    </div>
   </div>
 </body>
 </html>

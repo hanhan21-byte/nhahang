@@ -133,7 +133,7 @@
 <body>
 
 <header>
-    <h1>Quản Lý Nhân Viên</h1>
+    <h1>Nhân Viên</h1>
 </header>
 
 <?php include '../navbar/navbar.php'; ?>

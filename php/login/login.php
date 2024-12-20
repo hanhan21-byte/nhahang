@@ -138,13 +138,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <body>
   <div class="login-container">
     <form class="login-form" method="POST" action="login.php">
-      <h2>Login</h2>
+      <h2>Đăng nhập</h2>
       <div class="form-group">
-        <label for="username">Tên đăng nhập</label>
+        <label for="username">Tên người dùng</label>
         <input type="text" id="username" name="username" placeholder="Nhập tên đăng nhập" required>
       </div>
       <div class="form-group">
-        <label for="password">Password</label>
+        <label for="password">Mật khẩu</label>
         <input type="password" id="password" name="password" placeholder="Nhập mật khẩu" required>
       </div>
       <button type="submit" class="login-button">Đăng nhập</button>

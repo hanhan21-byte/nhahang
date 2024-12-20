@@ -81,7 +81,6 @@
 
     <div class="container">
         <h2>Chào mừng bạn đến với hệ thống quản lý nhà hàng</h2>
-        <p>Chọn một mục từ thanh điều hướng để bắt đầu quản lý nhà hàng.</p>
     </div>
 </body>
 </html>

@@ -122,7 +122,7 @@ $result = $conn->query($sql);
 </head>
 <body>
     <header>
-        <h1>Thực Đơn</h1>
+        <h1>Quản Lý Thực Đơn</h1>
     </header>
 
     <?php include '../navbar/navbar.php'; ?>
